@@ -36,9 +36,9 @@ $service = new GatewayService();
 //	Setup the Purchase request.
 //
 $request->Set(GatewayRequest::MERCHANT_ID(), "1519654393");
-$request->Set(GatewayRequest::MERCHANT_PASSWORD(), "5W9YU3EN9YVxQfXD");
-$request->Set(GatewayRequest::MERCHANT_ACCOUNT(), "419100025317");
-$request->Set(GatewayRequest::MERCHANT_SITE_ID(), "141");
+$request->Set(GatewayRequest::MERCHANT_PASSWORD(), "FDPJpHeKuQ2WraTm");
+$request->Set(GatewayRequest::MERCHANT_ACCOUNT(), "1");
+$request->Set(GatewayRequest::MERCHANT_SITE_ID(), "138");
 #$request->Set(GatewayRequest::MERCHANT_CUSTOMER_ID(), "cust-1");
 
 // For example/testing, we set the order id and customer as the unix timestamp as a convienent sequencing value
@@ -54,15 +54,16 @@ $request->Set(GatewayRequest::REBILL_START(), "30"); // renew in 3 days
 $request->Set(GatewayRequest::REBILL_FREQUENCY(), "MONTHLY"); // ongoing renewals monthly
 $request->Set(GatewayRequest::REBILL_AMOUNT(), "1.95");
 
-$request->Set(GatewayRequest::CARDNO(), "4111111111111111");
-$request->Set(GatewayRequest::EXPIRE_MONTH(), "02");
-$request->Set(GatewayRequest::EXPIRE_YEAR(), "2020");
+$request->Set(GatewayRequest::CARDNO(), "5105105105105100");
+$request->Set(GatewayRequest::EXPIRE_MONTH(), "08");
+$request->Set(GatewayRequest::EXPIRE_YEAR(), "2007");
 $request->Set(GatewayRequest::CVV2(), "999");
 
 $request->Set(GatewayRequest::CUSTOMER_FIRSTNAME(), "John");
-$request->Set(GatewayRequest::CUSTOMER_LASTNAME(), "PHPTester");
-$request->Set(GatewayRequest::EMAIL(), "phptest@fakedomain.com");
-$request->Set(GatewayRequest::IPADDRESS(), "127.0.0.1");
+$request->Set(GatewayRequest::CUSTOMER_LASTNAME(), "Test");
+$request->Set(GatewayRequest::EMAIL(), "api3@rocks.com");
+$request->Set(GatewayRequest::IPADDRESS(), "98.24.71.53");
+$request->Set(GatewayRequest::USERNAME(), "testjohn");
 
 $request->Set(GatewayRequest::BILLING_ADDRESS(), "123 Main St");
 $request->Set(GatewayRequest::BILLING_CITY(), "Las Vegas");
@@ -79,7 +80,7 @@ $request->Set(GatewayRequest::AVS_CHECK(), "IGNORE");
 //	Setup test parameters in the service and
 //	request.
 //
-#$service->SetTestMode(TRUE);
+$service->SetTestMode(TRUE);
 echo "DEBUG POST:";
 print_r($request);
 echo "\n";
